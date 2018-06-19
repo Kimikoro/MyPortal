@@ -1,0 +1,35 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*--header--*/
+.a-logo {
+	display: inline-block;
+	height: 0px;
+	width: 0px;
+}
+.header {
+	background-color: #FFF;
+	height: 100px;
+	width: 100%;
+	box-shadow: 0px 5px 10px -1px inset;
+}
+.top-logo {
+	height: 100px;
+	margin: 0 50px;
+}
+.myportal-logo {
+	height: 90px;
+}
+
+/*--top page--*/
+.top-main {
+	background-image: image-url('main-image.jpg');
+	min-height: 700px;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	box-shadow: 0px -1px 3px 3px,0px 1px 3px 0px inset; /*境界線ぼかし*/
+}
+

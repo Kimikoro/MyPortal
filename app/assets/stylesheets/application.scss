@@ -10,6 +10,29 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *= require_directory .
  *= require_self
  */
+
+  	/*bootstrap*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+   /*clearfix*/
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+	/*browser default reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body {
+  height: 100%;
+}
+body {
+	background-color: #000;
+}
