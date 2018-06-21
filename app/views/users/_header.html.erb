@@ -3,7 +3,12 @@
 <header>
 
 <div class="header">
+
+
 	<div class="top-logo"><%= link_to image_tag('myportal_logo.png', class:'myportal-logo'), root_path, class:'a-logo' %></div>
+
+	<div><%= link_to " Log out", destroy_user_session_path, method: :delete, class:"logout", 'aria-label':"Log out" %></div>
+
 
 </div>
 
