@@ -1,14 +1,19 @@
+<%= stylesheet_link_tag "css/users", :media => "all" %>
 
 <%= render 'users/header' %>
 <div class="top-main">
 	<div class="top-container">
+
 		<div class="top-title">Let's enjoy Day by Day</div>
-			<p class="top-text">MyPortal can collect services which you are using.</p>
-			<p class="top-text">And One puts them a page.</p>
-			<p class="top-text">So useful.</p>
+
+		<p class="top-text">MyPortal can collect services which you are using.</p>
+		<p class="top-text">And One puts them a page.</p>
+		<p class="top-text">So useful.</p>
+
 		<div class="top-btn-container">
 		<%= link_to "Login", new_user_session_path, class:'top-btn' %>
 		<%= link_to "SignUp", new_user_registration_path, class:'top-btn' %>
 		</div>
+
 	</div>
 </div>
