@@ -14,17 +14,17 @@
  *= require_self
  */
 
-  	/*bootstrap*/
+  	/*-bootstrap-*/
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-   /*clearfix*/
+   /*-clearfix-*/
 .clearfix::after {
 	content: "";
 	display: block;
 	clear: both;
 }
-	/*browser default reset*/
+	/*-browser default reset-*/
 * {
   margin: 0;
   padding: 0;
@@ -36,3 +36,5 @@ html,body {
 body {
 	background-color: #000;
 }
+
+
