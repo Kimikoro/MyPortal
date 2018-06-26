@@ -24,17 +24,15 @@
 	display: block;
 	clear: both;
 }
-	/*-browser default reset-*/
+	/*-browser default setting reset-*/
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html,body {
-  height: 100%;
+	margin: 0;
+ 	padding: 0;
+ 	box-sizing: border-box;
 }
 body {
-	background-color: #000;
+	background-color: #271c34;
 }
 
 
+	/*-devise session/new-*/
