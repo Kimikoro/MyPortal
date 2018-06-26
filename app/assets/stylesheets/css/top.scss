@@ -2,44 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-	/*--users/_header-*/
-	/*--header--*/
-.a-logo {
-	display: inline-block;
-	height: 0px;
-	width: 0px;
-}
-.header {
-	background-color: #FFF;
-	height: 100px;
-	width: 100%;
-	box-shadow: inset 0 -5px 5px -3px black, inset 0 2px 5px -2px; /*境界線ぼかし*/
-}
-.top-logo {
-	height: 100px;
-	width: 200px;
-	margin: 0 50px;
-}
-.myportal-logo {
-	height: 90px;
-}
-.logout {
-	float: left;
+
+body, html {
+	height: 100%;
+	min-height: 780px;
+	min-width: 1024px;
+	background-color: #000;
 }
 
 	/*--users/top-*/
 	/*--top page--*/
 .top-main {
 	background-image: image-url('main-image.jpg');
-	max-height: 1000px;
-	height: 100%;
-	min-width: 1024px;
-	width: 100%;
 	background-size: cover;
 	background-position: bottom;
+	height: 100%;
+	width: 100%;
 }
 	.top-container {
-		padding: 10% 0 0 10%;
+		padding-top: 10%;
+		margin-left: 10%;
 	}
 		.top-title {
 			color: #B1AFAC;
@@ -58,19 +40,19 @@
 			opacity: 0.8;
 		}
 			.top-btn{
-				margin-left: 20px;
 			    display: inline-block;
 			    position: relative;
 			    text-decoration: none;
-			    color: #f9a9ae;
-			    width: 150px;
-			    height: 50px;
-			    line-height: 50px;
-			    border-radius: 5px;
 			    text-align: center;
 			    vertical-align: middle;
 			    overflow: hidden;
 			    font-weight: bold;
+			    color: #f9a9ae;
+			    margin-left: 20px;
+			    width: 150px;
+			    height: 50px;
+			    line-height: 50px;
+			    border-radius: 5px;
 			    background-image: -webkit-linear-gradient(#fed6e3 0%, #ffaaaa 100%);
 			    background-image: linear-gradient(#fed6e3 0%, #ffaaaa 100%);
 			    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);

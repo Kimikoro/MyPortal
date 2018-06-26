@@ -1,50 +1,30 @@
+<div class="devise-cover">
+<%= stylesheet_link_tag "css/devise", :media => "all" %>
 
-<div class="devise-login">
-<h2>Log in</h2>
+<%= render 'users/header' %>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+  <div class="devise-login">
+  <h2 class="login">Log in</h2>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="devise-field input-group input-group-lg">
+      <span class="input-group-addon"> </span>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"devise-form form-control", placeholder: "Email" %>
     </div>
-  <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <div class="devise-field input-group input-group-lg">
+      <span class="input-group-addon"> </span>
+      <%= f.password_field :password, autocomplete: "password", class:"devise-form form-control", placeholder: "Password" %>
+    </div>
+
+
+    <div class="devise-field">
+      <%= f.submit "Log in", class:"btn btn-lg btn-primary btn-block btn-signin" %>
+    </div>
+  <% end %>
+
+  <%= render "users/shared/links" %>
+
   </div>
-<% end %>
-
-<%= render "users/shared/links" %>
-
 </div>
-
-<div class="login">
-  <div class="heading">
-    <h2>Sign in</h2>
-    <form action="#">
-
-      <div class="input-group input-group-lg">
-        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-        <input type="text" class="form-control" placeholder="Username or email">
-          </div>
-
-        <div class="input-group input-group-lg">
-          <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-          <input type="password" class="form-control" placeholder="Password">
-        </div>
-
-        <button type="submit" class="float">Login</button>
-       </form>
-    </div>
- </div>

@@ -1,4 +1,16 @@
+<%= stylesheet_link_tag "css/mains-index", :media => "all" %>
+<div class="main-index-container">
+<%= render 'users/header' %>
+
 <p id="notice"><%= notice %></p>
+
+<div class="main-twitter-container"></div>
+
+<div class="main-facebook-container"></div>
+
+<div class="main-rss-container"></div>
+
+
 
 <h1>Mains</h1>
 
@@ -23,3 +35,5 @@
 <br>
 
 <%= link_to 'New Main', new_main_path %>
+
+</div>

@@ -1,11 +1,28 @@
+<%= stylesheet_link_tag "css/header", :media => "all" %>
+
 <header>
 
 <div class="header">
 
 
-	<div class="top-logo"><%= link_to image_tag('myportal_logo.png', class:'myportal-logo'), root_path, class:'a-logo' %></div>
+	<div class="nav-logo"><%= link_to image_tag('myportal_logo.png', class:'myportal-logo'), root_path, class:'a-logo' %></div>
 
-	<div><%= link_to " Log out", destroy_user_session_path, method: :delete, class:"logout", 'aria-label':"Log out" %></div>
+	<div class="nav-menu"></div>
+	<% if user_signed_in? %>
+		<%= link_to root_path do%>
+			<span class="glyphicon glyphicon-user user-nav-item" aria-hidden="true"></span>
+		<% end %>
+		<%= link_to destroy_user_session_path, method: :delete do%>
+			<span class="glyphicon glyphicon-log-out user-nav-item" aria-hidden="true"></span>
+		<% end %>
+	<% else %>
+		<%= link_to new_user_registration_path do%>
+			<span class="glyphicon glyphicon-edit user-nav-item" aria-hidden="true"></span>
+		<% end %>
+		<%= link_to new_user_session_path do%>
+			<span class="glyphicon glyphicon-log-in user-nav-item" aria-hidden="true"></span>
+		<% end %>
+	<% end %>
 
 
 </div>
