@@ -2,6 +2,9 @@
 
 <%= render 'users/header' %>
 <div class="top-main">
+	<%= link_to destroy_user_session_path, method: :delete do%>
+			<span class="glyphicon glyphicon-log-out user-nav-item" aria-hidden="true"></span>
+		<% end %>
 	<div class="top-container">
 
 		<div class="top-title">Let's enjoy Day by Day</div>
@@ -13,6 +16,8 @@
 		<div class="top-btn-container">
 		<%= link_to "Login", new_user_session_path, class:'top-btn' %>
 		<%= link_to "SignUp", new_user_registration_path, class:'top-btn' %>
+		<%= link_to "Twitter Login", user_twitter_omniauth_authorize_path, class:'top-btn' %>
+		<%= link_to "Twitter Login", user_facebook_omniauth_authorize_path, class:'top-btn' %>
 		</div>
 
 	</div>

@@ -1,6 +1,11 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  #gem safe_yaml
+  require 'safe_yaml'
+  # Do this before loading any YAML
+  SafeYAML::OPTIONS[:default_mode] = :safe
+
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -27,9 +32,21 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
+  # devise mail confirm
   config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
+
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.smtp_settings = {
+  :enable_starttls_auto => true,
+  :address => "smtp.gmail.com",
+  :port => 587,
+  :domain => 'smtp.gmail.com',
+  :user_name => ENV["GMAIL_ID"],
+  :password => ENV["GMAIL_PASSWORD"],
+  :authentication => 'login',
+}
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

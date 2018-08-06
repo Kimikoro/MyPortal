@@ -1,39 +1,35 @@
 <%= stylesheet_link_tag "css/mains-index", :media => "all" %>
-<div class="main-index-container">
-<%= render 'users/header' %>
+<div class="main-background-container">
+  <%= render 'users/header' %>
 
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
-<div class="main-twitter-container"></div>
+<% if user_signed_in? %>
+<h1>こんにちは、<%= current_user.username %>さん</h1>
+<p>ユーザー用ページです。</p>
+<% else %>
+<p>ログインしてください</p>
+<% end %>
 
-<div class="main-facebook-container"></div>
-
-<div class="main-rss-container"></div>
 
 
 
-<h1>Mains</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 twitter-box">
+      </div>
+      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 facebook-box"></div>
+    </div>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @mains.each do |main| %>
-      <tr>
-        <td><%= link_to 'Show', main %></td>
-        <td><%= link_to 'Edit', edit_main_path(main) %></td>
-        <td><%= link_to 'Destroy', main, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class="row">
+      <div class="rss-box"></div>
+    </div>
+  </div>
 
-<br>
 
-<%= link_to 'New Main', new_main_path %>
+
+
+
 
 </div>

@@ -10,7 +10,7 @@
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="devise-field input-group input-group-lg">
       <span class="input-group-addon"> </span>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"devise-form form-control", placeholder: "Email" %>
+      <%= f.email_field :email, autofocus: true, class:"devise-form form-control", placeholder: "Email" %>
     </div>
 
     <div class="devise-field input-group input-group-lg">
