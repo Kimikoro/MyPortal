@@ -1,5 +1,29 @@
 class MainsController < ApplicationController
-  before_action :set_main, only: [:show, :edit, :update, :destroy]
+
+  helper_method :timeline
+  require 'twitter'
+
+  def client_new
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key = ENV["TWITTER_CONSUMER_KEY"]
+      config.consumer_secret = ENV["TWITTER_CONSUMER_SECRET"]
+      config.access_token = session[:oauth_token]
+      config.access_token_secret = session[:oauth_token_secret]
+    end
+
+    @user = client.user
+    client.home_timeline(:count => 200).each do |tweet|
+      @array = Array.new
+      @total_array = Array.new
+      @tweets = client.home_timeline(include_entities: true)
+      text = tweet.full_text
+      fav = tweet.favorite_count
+      rt = tweet.retweet_count
+      @weight = fav + rt * 1.5
+      @array = [text, fav, rt, @weight]
+      p @array
+    end
+  end
 
   # GET /mains
   # GET /mains.json
@@ -64,7 +88,6 @@ class MainsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_main
-      @main = Main.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

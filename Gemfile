@@ -53,9 +53,17 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# 保留
+
+gem 'safe_yaml'
 gem 'devise'
 gem 'cancancan'
-gem 'safe_yaml'
 gem 'rails_admin'
 gem 'bootstrap-sass'
-
+gem 'jquery-rails'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'twitter'
+gem 'config'
+gem 'dotenv-rails', require: 'dotenv/rails-now'

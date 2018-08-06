@@ -1,0 +1,7 @@
+twitter:
+  twitter_consumer_key: <%= ENV["TWITTER_CONSUMER_KEY"] %>
+  twitter_consumer_secret: <%= ENV["TWITTER_CONSUMER_SECRET"] %>
+
+gmail:
+  gmail_id: <%= ENV["GMAIL_ID"] %>
+  gmail_password: <%= ENV["GMAIL_PASSWORD"] %>

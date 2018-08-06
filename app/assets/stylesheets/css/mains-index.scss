@@ -1,11 +1,18 @@
 body {
-	height: 100%;
 	background-image: linear-gradient(-45deg, #000, #2a1c36);
+	min-height: 780px;
 }
-.main-index-container{
+.main-background-container{
 	height: 100%;
 	background-image: image-url('sakura1.png');
-	background-size: contain;
 }
-.main-twitter-container{
-}
+	.twitter-box, .facebook-box{
+		background-color: #e4a596;
+		border-radius: 20px;
+		box-shadow: inset 0 0 10px;
+		height: 1000px;
+		margin: 50px 0;
+	}
+	.facebook-box {
+		margin-left: 8.3%;
+	}
